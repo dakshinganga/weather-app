@@ -65,6 +65,7 @@ app.get("/weather", (req, res) => {
 			temperature: data.current.temperature,
 			address: `${data.location.name}, ${data.location.region}, ${data.location.country}`,
 			location: req.query.address,
+			humidity: data.current.humidity,
 		});
 	});
 });

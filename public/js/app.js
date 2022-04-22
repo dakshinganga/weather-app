@@ -22,6 +22,6 @@ weatherForm.addEventListener("submit", (e) => {
 				return;
 			}
 			messageOne.textContent = data.address;
-			messageTwo.textContent = `It is ${data.forecast} out their. The temperature is ${data.temperature}.`;
+			messageTwo.textContent = `It is ${data.forecast} out their. The temperature is ${data.temperature} degree C. The humidity is ${data.humidity}%. `;
 		});
 });
