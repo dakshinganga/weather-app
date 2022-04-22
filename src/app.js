@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const hbs = require("hbs");
-
+const PORT = process.env.PORT || 3000;
 const forecast = require("../utils/forecast");
 
 //define paths for Express config
@@ -84,6 +84,6 @@ app.get("*", (req, res) => {
 	});
 });
 
-app.listen(3000, () => {
-	console.log("Server Running");
+app.listen(PORT, () => {
+	console.log(`Server Running ${PORT}`);
 });
